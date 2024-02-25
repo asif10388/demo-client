@@ -12,5 +12,4 @@ yarn install
 
 yarn build
 
-serve ./root.drio/out -p 3001 &
-serve ./saas.drio/out -p 3000
+yarn serve

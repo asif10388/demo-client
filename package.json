@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "test": "concurrently \"yarn workspace saas.drio test\"",
-    "serve": "nohup serve ./saas.drio/out -p 3000 & nohup serve ./root.drio/out -p 3001",
     "build": "yarn workspace root.drio build && yarn workspace saas.drio build",
+    "serve": "nohup serve ./saas.drio/out -p 3000 > saas-serve.out 2> saas-serve.err < /dev/null & nohup serve ./root.drio/out -p 3001 > root-serve.out 2> root-serve.err < /dev/null &",
     "start": "concurrently \"yarn workspace root.drio start\" \"yarn workspace saas.drio start\"",
     "dev": "concurrently \"yarn workspace root.drio dev\" \"yarn workspace saas.drio dev\" \"yarn workspace logistics-ui dev\""
   },
