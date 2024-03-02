@@ -1,13 +1,13 @@
 import Layout from "@/comps/Layout";
 import withAuth from "@/comps/HOC/withAuth";
-import OrgAccounts from "@/comps/RootAdmin/OrgUnits";
+import OrgUnits from "@/comps/RootAdmin/OrgUnits";
 import DashboardContainer from "@ui/Containers/DashboardContainer";
 
 const OrgUnitPage = () => {
   return (
     <Layout>
       <DashboardContainer>
-        <OrgAccounts />
+        <OrgUnits />
       </DashboardContainer>
     </Layout>
   );
